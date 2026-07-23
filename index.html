@@ -3,15 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blo Blast</title>
+    <title>BloBlast</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>Blo Blast</h1>
-        <div id="score">Счет: 0</div>
-        <div id="grid"></div>
+
+    <div class="header">
+        <div class="crown">👑 <span>293224</span></div>
+        <div class="settings">⚙️</div>
     </div>
+
+    <div class="score-container" id="score">15</div>
+
+    <div class="grid-wrapper">
+        <div class="grid" id="grid"></div>
+    </div>
+
+    <div class="figures-container">
+        <div class="figure-slot">
+            <div class="mini-block"></div>
+            <div class="mini-block"></div>
+            <div class="mini-block"></div>
+        </div>
+        <div class="figure-slot">
+            <div class="mini-block vertical"></div>
+        </div>
+        <div class="figure-slot">
+            <div class="mini-block l-shape"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
