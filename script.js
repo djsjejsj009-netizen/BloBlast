@@ -2,29 +2,18 @@ const grid = document.getElementById('grid');
 const width = 8;
 const squares = [];
 
-const colors = [
-    '#ff4757', // красный
-    '#2ed573', // зеленый
-    '#1e90ff', // синий
-    '#ffa502', // оранжевый
-    '#9b59b6'  // фиолетовый
-];
-
 function createBoard() {
     for (let i = 0; i < width * width; i++) {
         const square = document.createElement('div');
-        square.style.width = '35px';
-        square.style.height = '35px';
-        square.style.border = '1px solid #444';
-        square.style.borderRadius = '4px';
+        square.classList.add('square');
 
-        // Закрашиваем каждую ячейку случайным цветом
-        const randomColor = colors[Math.floor(Math.random() * colors.length)];
-        square.style.backgroundColor = randomColor;
+        // Сделаем случайные блоки заполненными для красоты
+        if (Math.random() > 0.5) {
+            square.classList.add('filled');
+        }
 
-        // Клик по блоку делает его темным (эффект удаления)
         square.addEventListener('click', () => {
-            square.style.backgroundColor = '#222';
+            square.classList.toggle('filled');
         });
 
         grid.appendChild(square);
